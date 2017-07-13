@@ -1,0 +1,49 @@
+body,h3{
+	margin:0;
+	padding:0;
+}
+table,th,td{
+	padding:0;
+	border-collapse: separate;
+    border-spacing:0;
+}
+a{
+	text-decoration: none;
+}
+.content{
+	width: 500px;
+	height: auto;
+	margin: 0 auto;
+}
+.content h3{
+	text-align: center;
+	line-height: 2;
+}
+.content table{
+	width: 100%;
+	border-top:1px solid #ccc;
+	border-left: 1px solid #ccc;
+}
+
+.content td,th{
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding:5px 10px;
+}
+.content tr{
+	text-align: center;
+	line-height: 1.5;
+}
+.content a{
+	display: block;
+	float: right;
+	background: purple;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 10px;
+	margin-top: 3px;
+
+}
+.content a:active{
+	background: pink;
+}

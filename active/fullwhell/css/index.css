@@ -1,0 +1,43 @@
+body,ul,li{
+	margin: 0;
+	padding:0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #ccc;
+}
+img{
+	border:0;
+}
+html,body{
+	height: 100%;
+}
+body{
+	overflow: hidden;
+}
+.screen{
+	width: 100%;
+	height: 100%;
+	font-size: 200px;
+	line-height: 600px;
+	text-align: center;
+	opacity: 0.5;
+	top:100%;
+	position: absolute;
+}
+.r{
+	background: red;
+}
+.g{
+	background:green;
+}
+.b{
+	background: blue;
+}
+.y{
+	background:yellow;
+}
+.p{
+	background:purple;
+}

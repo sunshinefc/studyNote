@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="box">
+		
+	</div>
+	<script>
+
+	function date(){
+		var nowT=new Date();
+		var futureT=new Date(2016,7,27,10,0,0);
+		var ns=nowT.getTime();
+		var fs=futureT.getTime();
+		var ss=(fs-ns);
+
+		var d=Math.floor(ss/(1000*24*60*60));
+		//剩余的不满一天的小时数
+		var ds=ss%(1000*24*60*60);
+
+
+		var h=Math.floor(ds/(1000*60*60))
+		// 剩余不满一小时的分钟数
+		var hs=ds%(1000*60*60)
+
+		var f=Math.floor(hs/(1000*60))
+		//剩余不满一分钟的秒数
+		var fs=hs%(1000*60)
+
+		var s=Math.round(fs/1000);
+		s=s<10?'0'+s:s;
+		
+		box.innerHTML=d+'天'+h+'小时'+f+'分钟'+s+'秒';
+	}
+	date()
+	setInterval(date,1000)
+
+
+
+	</script>
+</body>
+</html>

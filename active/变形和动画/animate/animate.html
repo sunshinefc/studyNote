@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<link rel="stylesheet" href="animate.css">
+<script src="jquery.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    <div class="animate">
+        <div class="cube ani"></div>
+    </div>
+</body>
+</html>
+<script>
+//    var str='@import "../../lib/ani/fade-in"; @ import "../../lib/ani/fade-in-up"; @ import "../../lib/ani/fade-in-right"; @ import "../../lib/ani/fade-in-down"; @ import "../../lib/ani/fade-in-left"; @ import "../../lib/ani/fade-out"; @ import "../../lib/ani/fade-out-up"; @ import "../../lib/ani/fade-out-right"; @ import "../../lib/ani/fade-out-down"; @ import "../../lib/ani/fade-out-left"; @ import "../../lib/ani/elastic-x"; @ import "../../lib/ani/elastic-y"; @ import "../../lib/ani/elastic-in"; @ import "../../lib/ani/elastic-in-up"; @ import "../../lib/ani/elastic-in-right"; @ import "../../lib/ani/elastic-in-down"; @ import "../../lib/ani/elastic-in-left"; @ import "../../lib/ani/elastic-out"; @ import "../../lib/ani/elastic-out-up"; @ import "../../lib/ani/elastic-out-right"; @ import "../../lib/ani/elastic-out-down"; @ import "../../lib/ani/elastic-out-left"; @ import "../../lib/ani/flip"; @ import "../../lib/ani/flip-in-x"; @ import "../../lib/ani/flip-in-y"; @ import "../../lib/ani/flip-out-x"; @ import "../../lib/ani/flip-out-y"; @ import "../../lib/ani/roll-in-right"; @ import "../../lib/ani/roll-in-left"; @ import "../../lib/ani/roll-out-right"; @ import "../../lib/ani/roll-out-left"; @ import "../../lib/ani/speed-in-right"; @ import "../../lib/ani/speed-in-left"; @ import "../../lib/ani/speed-out-right"; @ import "../../lib/ani/speed-out-left"; @ import "../../lib/ani/rotate"; @ import "../../lib/ani/rotate-in"; @ import "../../lib/ani/rotate-in-up-right"; @ import "../../lib/ani/rotate-in-up-left"; @ import "../../lib/ani/rotate-in-down-right"; @ import "../../lib/ani/rotate-in-down-left"; @ import "../../lib/ani/rotate-out"; @ import "../../lib/ani/rotate-out-up-right"; @ import "../../lib/ani/rotate-out-up-left"; @ import "../../lib/ani/rotate-out-down-right"; @ import "../../lib/ani/rotate-out-down-left"; @ import "../../lib/ani/zoom-in"; @ import "../../lib/ani/zoom-in-up"; @ import "../../lib/ani/zoom-in-right"; @ import "../../lib/ani/zoom-in-down"; @ import "../../lib/ani/zoom-in-left"; @ import "../../lib/ani/zoom-out"; @ import "../../lib/ani/zoom-out-up"; @ import "../../lib/ani/zoom-out-right"; @ import "../../lib/ani/zoom-out-down"; @ import "../../lib/ani/zoom-out-left"; @ import "../../lib/ani/flash"; @ import "../../lib/ani/shake"; @ import "../../lib/ani/pulse"; @ import "../../lib/ani/extrusion"; @ import "../../lib/ani/stretch"; @ import "../../lib/ani/swing"; @ import "../../lib/ani/sling"; @ import "../../lib/ani/wobble"; @ import "../../lib/ani/hinge";';
+//    var arr=str.split(';');
+//    arr.map(function(v){
+//        return v.slice(25,-1)
+//    })
+    var arr=["fade-in", "fade-in-up", "fade-in-right", "fade-in-down", "fade-in-left", "fade-out", "fade-out-up", "fade-out-right", "fade-out-down", "fade-out-left", "elastic-x", "elastic-y", "elastic-in", "elastic-in-up", "elastic-in-right", "elastic-in-down", "elastic-in-left", "elastic-out", "elastic-out-up", "elastic-out-right", "elastic-out-down", "elastic-out-left", "flip", "flip-in-x", "flip-in-y", "flip-out-x", "flip-out-y", "roll-in-right", "roll-in-left", "roll-out-right", "roll-out-left", "speed-in-right", "speed-in-left", "speed-out-right", "speed-out-left", "rotate", "rotate-in", "rotate-in-up-right", "rotate-in-up-left", "rotate-in-down-right", "rotate-in-down-left", "rotate-out", "rotate-out-up-right", "rotate-out-up-left", "rotate-out-down-right", "rotate-out-down-left", "zoom-in", "zoom-in-up", "zoom-in-right", "zoom-in-down", "zoom-in-left", "zoom-out", "zoom-out-up", "zoom-out-right", "zoom-out-down", "zoom-out-left", "flash", "shake", "pulse", "extrusion", "stretch", "swing", "sling", "wobble", "hinge"];
+    for(var i=0;i<arr.length;i++){
+        $('<div>').addClass('hezi').appendTo($('.box')).text(arr[i])
+
+    }
+    $('body').on('click','.hezi',function(){
+        $('.cube').attr('class','cube ani infinite');
+        $('.ani').addClass($(this).text());
+
+    })
+
+</script>

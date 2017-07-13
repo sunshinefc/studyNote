@@ -1,0 +1,86 @@
+*{
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+$m-size:1070px;
+@mixin onm{
+  @media screen and (max-width: $m-size) {
+    @content;
+  }
+}
+
+$s-size:736px;
+@mixin ons{
+  @media screen and (max-width: $s-size){
+    @content;
+  }
+}
+
+.row{
+  overflow: hidden;
+}
+.col{
+  float: left;
+}
+li{
+  height: 200px;
+  width: 25%;
+  box-sizing: border-box;
+}
+@for $i from 1 through 12{
+  .d-#{$i}{
+    width: percentage($i/12);
+  }
+}
+@include onm{
+  @for $i from 1 through 12{
+    .m-#{$i}{
+      width: percentage($i/12);
+    }
+  }
+}
+@include ons{
+  @for $i from 1 through 12{
+    .s-#{$i}{
+      width: percentage($i/12);
+    }
+  }
+}
+$ads-list:"ios","music","watchos","iphone_upgrade";
+.ads{
+  @each $ad in $ads-list{
+    .#{$ad}{
+      background: url("img/" + $ad + "_large.jpg") no-repeat center center;
+    }
+    @include onm{
+      .#{$ad}{
+        background: url("img/" + $ad + "_medium.jpg") no-repeat center center;
+      }
+    }
+    @include ons{
+      .#{$ad}{
+        background: url("img/" + $ad + "_small.jpg") no-repeat center center;
+      }
+    }
+  }
+}
+.contain{
+  width: 980px;
+  margin: auto;
+}
+.left{
+  height: 200px;
+  background: #000;
+  float: left;
+}
+.right{
+  height: 200px;
+  background: #238c18;
+  float: right;
+}
+
+
+
+
+

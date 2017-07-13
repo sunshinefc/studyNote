@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='function.js'></script>
+	<script src='animate.js'></script>
+	<script>
+		$(function(){
+			var box=$('.box')[0]
+			var one=$('.one',box)
+			 // console.log(one)
+			for(var i=0;i<one.length;i++){
+				one[i].onmouseover=function(){
+					var img=$('img',this)[0]
+					animate(img,{width:160,bottom:20},300)
+				}
+
+				one[i].onmouseout=function(){
+					var img=$('img',this)[0]
+					animate(img,{width:150,bottom:30},300)
+				}
+			}
+		})
+
+	</script>
+	<style>
+		.box{
+			width: 900px;
+			height: 300px;
+			margin: 0 auto;
+			border:1px solid purple;
+		}
+		
+		.box .one{
+			width: 299px;
+			height: 300px;
+			border-right: 1px solid purple;
+			border-bottom: 1px solid purple;
+			position: relative;
+			float: left;
+
+		}
+		.box .one .mask{
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			background: #555;
+			left: 0;
+			right: 0;
+			margin:0 auto;
+			bottom: 30px;
+			opacity: 0.1;
+			z-index: 2;
+			position: absolute;
+		}
+		.box .one img{
+			width: 140px;
+			height: auto;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			z-index: 1;
+			bottom: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="one">
+			<div class="mask"></div>
+			<img src="2.png" alt="">
+		</div>
+
+		<div class="one">
+			<div class="mask"></div>
+			<img src="2.png" alt="">
+		</div>
+
+		<div class="one">
+			<div class="mask"></div>
+			<img src="2.png" alt="">
+		</div>
+
+	</div>
+</body>
+</html>

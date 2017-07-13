@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='citydata.js'></script>
+</head>
+<body>
+	<select  id="province"></select>
+	<select  id="city"></select>
+	<select  id="area"></select>
+
+
+	<script>
+	//获取三个select
+	var province=document.getElementById('province');
+	var city=document.getElementById('city');
+	var area=document.getElementById('area');
+
+	//将数组保存在变量p中
+	var p=provinceList;
+
+	//设置省份选项默认值为省份
+	province.innerHTML='<option>省份</option>'
+	//遍历p数组,取出所有省份
+	for(var i=0;i<p.length;i++){
+		//创建
+		var option=document.createElement('option');
+		option.innerHTML=p[i].name;
+		province.appendChild(option);
+	}
+	city.innerHTML='<option>城市</option>'
+	area.innerHTML='<option>地区</option>'
+	province.onchange=function(){
+		city.innerHTML='<option>城市</option>'
+		var k=province.selectedIndex-1;
+		
+		var citys=p[k].cityList;
+		for(var i=0;i<citys.length;i++){
+			var option=document.createElement('option');
+			option.innerHTML=citys[i].name;
+			city.appendChild(option);
+		}
+		city.onchange=function(){
+			area.innerHTML='<option>地区</option>'
+			var j=city.selectedIndex-1;
+			var areas=p[k].cityList[j].areaList;
+			for(var i=0;i<areas.length;i++){
+				var option=document.createElement('option');
+				option.innerHTML=areas[i];
+				area.appendChild(option);
+			}
+
+		}
+	}
+
+	</script>
+</body>
+</html>

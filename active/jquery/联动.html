@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='jquery.js'></script>
+</head>
+<body>
+	<div class="header">
+		<input type="checkbox">
+		<ul>
+			<li><input type="checkbox"></li>
+			<li><input type="checkbox"></li>
+			<li><input type="checkbox"></li>
+			<li><input type="checkbox"></li>
+		</ul>
+	</div>
+</body>
+	<script>
+		$(function(){
+			var box=$('.header > input:checkbox')
+			var inputs=$('.header > ul input')
+			console.dir(box)
+			console.dir(inputs)
+			box.on('click',function(){
+				if($('.header > input:checked').length===0){
+					inputs.removeProp('checked')
+				}else{
+					inputs.prop('checked','true')
+				}
+				
+			})
+
+			inputs.on('click',function(){
+				if($('.header > ul input:checked').length===4){
+					box.prop('checked','true')
+				}else{
+					box.removeProp('checked')
+				}
+			})
+		})
+
+	</script>
+</html>

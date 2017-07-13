@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='citydata.js'></script>
+</head>
+<body>
+	<select  id="province"></select>
+	<select  id="city"></select>
+	<select  id="area"></select>
+
+
+	<script>
+	var PCA={
+		 province:document.getElementById('province'),	
+		 city:document.getElementById('city'),
+		 area:document.getElementById('area'),
+		 p:provinceList,
+
+
+		 init:function(){
+				PCA.province.innerHTML='<option>省份</option>'
+				PCA.city.innerHTML='<option>城市</option>'
+				PCA.area.innerHTML='<option>地区</option>'
+				for(var i=0;i<PCA.p.length;i++){
+					var option=document.createElement('option');
+					option.innerHTML=PCA.p[i].name;
+					PCA.province.appendChild(option);
+				}
+
+				PCA.move();
+
+			},
+
+
+		 move:function(){
+				PCA.province.onchange=function(){
+					PCA.city.innerHTML='<option>城市</option>'
+					var k=PCA.province.selectedIndex-1;
+					
+					var citys=PCA.p[k].cityList;
+					for(var i=0;i<citys.length;i++){
+						var option=document.createElement('option');
+						option.innerHTML=citys[i].name;
+						PCA.city.appendChild(option);
+					}
+					PCA.city.onchange=function(){
+						PCA.area.innerHTML='<option>地区</option>'
+						var j=PCA.city.selectedIndex-1;
+						var areas=PCA.p[k].cityList[j].areaList;
+						for(var i=0;i<areas.length;i++){
+							var option=document.createElement('option');
+							option.innerHTML=areas[i];
+							PCA.area.appendChild(option);
+						}
+
+					}
+				}
+			}
+	}
+
+	PCA.init()
+
+
+
+
+	
+
+	
+	
+	
+
+	</script>
+</body>
+</html>

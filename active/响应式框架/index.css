@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.row {
+  overflow: hidden; }
+
+.col {
+  float: left; }
+
+li {
+  height: 200px;
+  width: 25%;
+  box-sizing: border-box; }
+
+.d-1 {
+  width: 8.33333%; }
+
+.d-2 {
+  width: 16.66667%; }
+
+.d-3 {
+  width: 25%; }
+
+.d-4 {
+  width: 33.33333%; }
+
+.d-5 {
+  width: 41.66667%; }
+
+.d-6 {
+  width: 50%; }
+
+.d-7 {
+  width: 58.33333%; }
+
+.d-8 {
+  width: 66.66667%; }
+
+.d-9 {
+  width: 75%; }
+
+.d-10 {
+  width: 83.33333%; }
+
+.d-11 {
+  width: 91.66667%; }
+
+.d-12 {
+  width: 100%; }
+
+@media screen and (max-width: 1070px) {
+  .m-1 {
+    width: 8.33333%; }
+  .m-2 {
+    width: 16.66667%; }
+  .m-3 {
+    width: 25%; }
+  .m-4 {
+    width: 33.33333%; }
+  .m-5 {
+    width: 41.66667%; }
+  .m-6 {
+    width: 50%; }
+  .m-7 {
+    width: 58.33333%; }
+  .m-8 {
+    width: 66.66667%; }
+  .m-9 {
+    width: 75%; }
+  .m-10 {
+    width: 83.33333%; }
+  .m-11 {
+    width: 91.66667%; }
+  .m-12 {
+    width: 100%; } }
+
+@media screen and (max-width: 736px) {
+  .s-1 {
+    width: 8.33333%; }
+  .s-2 {
+    width: 16.66667%; }
+  .s-3 {
+    width: 25%; }
+  .s-4 {
+    width: 33.33333%; }
+  .s-5 {
+    width: 41.66667%; }
+  .s-6 {
+    width: 50%; }
+  .s-7 {
+    width: 58.33333%; }
+  .s-8 {
+    width: 66.66667%; }
+  .s-9 {
+    width: 75%; }
+  .s-10 {
+    width: 83.33333%; }
+  .s-11 {
+    width: 91.66667%; }
+  .s-12 {
+    width: 100%; } }
+
+.ads .ios {
+  background: url("img/ios_large.jpg") no-repeat center center; }
+
+@media screen and (max-width: 1070px) {
+  .ads .ios {
+    background: url("img/ios_medium.jpg") no-repeat center center; } }
+
+@media screen and (max-width: 736px) {
+  .ads .ios {
+    background: url("img/ios_small.jpg") no-repeat center center; } }
+
+.ads .music {
+  background: url("img/music_large.jpg") no-repeat center center; }
+
+@media screen and (max-width: 1070px) {
+  .ads .music {
+    background: url("img/music_medium.jpg") no-repeat center center; } }
+
+@media screen and (max-width: 736px) {
+  .ads .music {
+    background: url("img/music_small.jpg") no-repeat center center; } }
+
+.ads .watchos {
+  background: url("img/watchos_large.jpg") no-repeat center center; }
+
+@media screen and (max-width: 1070px) {
+  .ads .watchos {
+    background: url("img/watchos_medium.jpg") no-repeat center center; } }
+
+@media screen and (max-width: 736px) {
+  .ads .watchos {
+    background: url("img/watchos_small.jpg") no-repeat center center; } }
+
+.ads .iphone_upgrade {
+  background: url("img/iphone_upgrade_large.jpg") no-repeat center center; }
+
+@media screen and (max-width: 1070px) {
+  .ads .iphone_upgrade {
+    background: url("img/iphone_upgrade_medium.jpg") no-repeat center center; } }
+
+@media screen and (max-width: 736px) {
+  .ads .iphone_upgrade {
+    background: url("img/iphone_upgrade_small.jpg") no-repeat center center; } }
+
+.contain {
+  width: 980px;
+  margin: auto; }
+
+.left {
+  height: 200px;
+  background: #000;
+  float: left; }
+
+.right {
+  height: 200px;
+  background: #238c18;
+  float: right; }

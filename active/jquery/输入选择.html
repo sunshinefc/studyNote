@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='jquery.js'></script>
+</head>
+<body>
+	<input type="text" id='search'>
+	<ul>
+		<li>zhangsan</li>
+		<li>lisi</li>
+		<li>wangwu</li>
+		<li>xiaoming</li>
+	</ul>
+</body>
+	<script>
+	$('#search').on('keyup',function(){
+		var v=$(this).val()
+		$(this).find('+ul li').css('color','#000')
+		if(v!=''){
+			$(this).find('+ul li:contains('+v+')').css('color','purple')
+		}
+		
+
+	})
+
+
+
+	</script>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body{
+		margin: 0;
+	}
+		.box{
+			width: 1200px;
+			height: 10000px;
+			border: 1px solid blue;
+			margin: 0 auto;
+		}
+		.left,.right{
+			width: 100px;
+			height: 400px;
+			background: purple;
+		}
+		.left{
+			top:0;
+			position: absolute;
+
+		}
+		.right{
+			top:0;
+			right: 0;
+			position: absolute;
+			
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="box"></div>
+	<div class="right"></div>
+	<div class="left"></div>
+
+	<script>
+		var left=document.getElementsByClassName('left')[0]
+		var right=document.getElementsByClassName('right')[0]
+		var ch=document.documentElement.clientHeight;
+		var lh=left.offsetHeight;
+
+		console.log(ch)
+		console.log(ch-lh)
+		window.onscroll=function(){
+				var scroll=document.body.scrollTop||document.documentElement.scrollTop
+				left.style.top=scroll+(ch-lh)/2+'px'
+				right.style.top=scroll+(ch-lh)/2+'px'
+
+			}
+
+			window.onscroll()
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <title>组件</title>
+    <style>
+        .dropdown{
+            margin-left: 20px;
+            float: left;
+        }
+        .xiala{
+            height: 70px;
+        }
+        .input-group{
+            margin-top: 10px;
+        }
+        /*.nav >li.active >a{*/
+            /*background-color: pink;*/
+        /*}*/
+    </style>
+</head>
+<body>
+    <div class="container">
+
+
+        <!--字体图标-->
+        <h3>1.字体图标</h3>
+        <span class="glyphicon glyphicon-search"></span>
+        <button type="button" class="btn btn-default btn-lg">
+            <span class="glyphicon glyphicon-star"></span> 星星
+        </button>
+
+
+        <!--下拉菜单-->
+        <h3>2.下拉菜单</h3>
+        <div class="xiala">
+
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                    有标题下拉
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation" class="dropdown-header">数字</li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
+                    <li role="presentation" class="dropdown-header">名字</li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">小明</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">笑笑</a></li>
+                </ul>
+            </div>
+
+            <!--下拉菜单添加标题-->
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                <li role="presentation" class="dropdown-header">数字</li>
+            </ul>
+
+            <!--下拉菜单有分割线-->
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuDivider">
+                <li role="presentation" class="divider"></li>
+            </ul>
+            <!--例子有分割线-->
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+                    有分割线下拉
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuDivider">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
+                    <li role="presentation" class="divider"></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">小明</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">笑笑</a></li>
+                </ul>
+            </div>
+
+            <!--禁用菜单项-->
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown">
+                    有禁用下拉
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">可用</a></li>
+                    <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">禁用</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">可用</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--按钮-->
+        <h3>3.按钮</h3>
+        <h4>基本</h4>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default">Left</button>
+            <button type="button" class="btn btn-default">Middle</button>
+            <button type="button" class="btn btn-default">Right</button>
+        </div>
+
+        <h4>按钮工具栏</h4>
+            <div class="btn-toolbar" role="toolbar">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default">1</button>
+                    <button type="button" class="btn btn-default">2</button>
+                    <button type="button" class="btn btn-default">3</button>
+
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default">4</button>
+                    <button type="button" class="btn btn-default">5</button>
+
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default">6</button>
+                    <button type="button" class="btn btn-default">7</button>
+                    <button type="button" class="btn btn-default">8</button>
+                </div>
+            </div>
+
+        <h4>尺寸</h4>
+        <div class="btn-group btn-group-lg">
+            <button type="button" class="btn btn-default">1</button>
+            <button type="button" class="btn btn-default">2</button>
+            <button type="button" class="btn btn-default">3</button>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default">1</button>
+            <button type="button" class="btn btn-default">2</button>
+            <button type="button" class="btn btn-default">3</button>
+        </div>
+        <div class="btn-group btn-group-sm">
+            <button type="button" class="btn btn-default">1</button>
+            <button type="button" class="btn btn-default">2</button>
+            <button type="button" class="btn btn-default">3</button>
+        </div>
+        <div class="btn-group btn-group-xs"><button type="button" class="btn btn-default">1</button>
+            <button type="button" class="btn btn-default">2</button>
+            <button type="button" class="btn btn-default">3</button>
+        </div>
+
+
+        <!--未实现   给 .btn-group 加上 .btn-group-* 类，就省去为按钮组中的每个按钮都赋予尺寸类了-->
+        <!--<div class="btn-group btn-group-*">-->
+            <!--<button type="button" class="btn btn-default">4</button>-->
+            <!--<button type="button" class="btn btn-default">5</button>-->
+            <!--<button type="button" class="btn btn-default">6</button>-->
+        <!--</div>-->
+        <!--<div class="btn-group btn-group-*">-->
+            <!--<button type="button" class="btn btn-default">4</button>-->
+            <!--<button type="button" class="btn btn-default">5</button>-->
+            <!--<button type="button" class="btn btn-default">6</button>-->
+        <!--</div>-->
+        <!--<div class="btn-group btn-group-*">-->
+            <!--<button type="button" class="btn btn-default">4</button>-->
+            <!--<button type="button" class="btn btn-default">5</button>-->
+            <!--<button type="button" class="btn btn-default">6</button>-->
+        <!--</div>-->
+
+        <h4>下拉嵌套到按钮中</h4>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default">1</button>
+            <button type="button" class="btn btn-default">2</button>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                   下拉
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">小米</a></li>
+                    <li><a href="#">华为</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <h4>单按钮下拉菜单</h4>
+        <!-- Single button -->
+        <div class="btn-group">
+            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                Action <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li class="divider"></li>
+                <li><a href="#">4</a></li>
+            </ul>
+        </div>
+
+        <h4>分裂式下拉菜单</h4>
+        <div class="btn-group">
+            <button type="button" class="btn btn-success">Action</button>
+            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li class="divider"></li>
+                <li><a href="#">4</a></li>
+            </ul>
+        </div>
+
+        <h4>尺寸</h4>
+        <div class="btn-group">
+            <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+                大<span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+            </ul>
+        </div>
+
+        <!-- Small button group -->
+        <div class="btn-group">
+            <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+                小 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+            </ul>
+        </div>
+
+        <!-- Extra small button group -->
+        <div class="btn-group">
+            <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+                超小 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+            </ul>
+        </div>
+
+        <h4>向上弹出菜单</h4>
+        <div class="btn-group dropup">
+            <button type="button" class="btn btn-default">向上</button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+            </ul>
+        </div>
+
+        <h3>4.输入框</h3>
+
+        <h4>基本</h4>
+        <div class="input-group">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control" placeholder="Username">
+        </div>
+
+        <div class="input-group">
+            <input type="text" class="form-control">
+            <span class="input-group-addon">.00</span>
+        </div>
+
+        <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input type="text" class="form-control">
+            <span class="input-group-addon">.00</span>
+        </div>
+
+        <h4>尺寸</h4>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control" placeholder="Username">
+        </div>
+
+        <div class="input-group">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control" placeholder="Username">
+        </div>
+
+        <div class="input-group input-group-sm">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control" placeholder="Username">
+        </div>
+
+        <h4>复选框和单选框</h4>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="input-group">
+      <span class="input-group-addon">
+        <input type="checkbox">
+      </span>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="input-group">
+      <span class="input-group-addon">
+        <input type="radio">
+      </span>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <h4>作为额外元素的按钮</h4>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </div>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <input type="text" class="form-control">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+     <h3>5.导航</h3>
+        <h4>标签</h4>
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="javascript:;">首页</a></li>
+            <li role="presentation"><a href="javascript:;">商城</a></li>
+            <li role="presentation"><a href="javascript:;">关于我们</a></li>
+        </ul>
+
+        <h4>胶囊</h4>
+        <!--两种:1.给nav加nav-stacked类  2.不加-->
+        <ul class="nav nav-pills " role="tablist">
+            <li role="presentation" class="active"><a href="#">首页</a></li>
+            <li role="presentation"><a href="#">商城</a></li>
+            <li role="presentation"><a href="#">关于我们</a></li>
+        </ul>
+
+        <h4>两端对齐</h4>
+        <ul class="nav nav-pills nav-justified" role="tablist">
+            <li role="presentation" class="active"><a href="#">首页</a></li>
+            <li role="presentation"><a href="#">商城</a></li>
+            <li role="presentation"><a href="#">关于我们</a></li>
+        </ul>
+
+        <h4>禁用链接</h4>
+        <ul class="nav nav-pills" role="tablist">
+
+            <li role="presentation"><a href="#">可用链接</a></li>
+            <li role="presentation" class="disabled"><a href="#">禁用链接</a></li>
+            <li role="presentation"><a href="#">可用链接</a></li>
+        </ul>
+
+        <h4>胶囊带下拉</h4>
+        <ul class="nav nav-pills " role="tablist">
+            <li role="presentation" class="active"><a href="#">首页</a></li>
+            <li role="presentation"><a href="#">商城</a></li>
+            <li role="presentation" class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    关于我们<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>6.导航条</h3>
+        <!--反色加类navbar-inverse-->
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Brand</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">4</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">5</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Link</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <h4>路径导航</h4>
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Library</a></li>
+            <li class="active">Data</li>
+        </ol>
+
+        <h4>分页</h4>
+        <nav>
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </nav>
+
+        <h4>翻页</h4>
+        <nav>
+            <ul class="pager">
+                <li><a href="#">上一页</a></li>
+                <li><a href="#">下一页</a></li>
+            </ul>
+        </nav>
+
+        <h3>7.标签</h3>
+        <h3>例子 <span class="label label-default">标签</span></h3>
+
+        <h4>可用的变体</h4>
+        <span class="label label-default">Default</span>
+        <span class="label label-primary">Primary</span>
+        <span class="label label-success">Success</span>
+        <span class="label label-info">Info</span>
+        <span class="label label-warning">Warning</span>
+        <span class="label label-danger">Danger</span>
+
+
+        <h3>8.徽章</h3>
+        <a href="#">Inbox <span class="badge">42</span></a>
+
+        <button class="btn btn-primary" type="button">
+            Messages <span class="badge">4</span>
+        </button>
+
+        <h3>9.巨幕</h3>
+        <div class="jumbotron">
+            <h1>Hello, world!</h1>
+            <p></p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">更多</a></p>
+        </div>
+
+        <h3>10.页头</h3>
+        <div class="page-header">
+            <h1>Example page header <small>Subtext for header</small></h1>
+        </div>
+
+        <h3>11.警告框</h3>
+        <div class="alert alert-success" role="alert">...</div>
+        <div class="alert alert-info" role="alert">...</div>
+        <div class="alert alert-warning" role="alert">...</div>
+        <div class="alert alert-danger" role="alert">...</div>
+
+        <h4>可关闭的警告框</h4>
+        <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <strong>警告!</strong> Better check yourself, you're not looking too good.
+        </div>
+
+        <h3>12.进度条</h3>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                60%
+            </div>
+        </div>
+
+        <h4>条纹效果</h4>
+        <div class="progress">
+            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                <span class="sr-only">40% Complete (success)</span>
+            </div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                <span class="sr-only">20% Complete</span>
+            </div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                <span class="sr-only">60% Complete (warning)</span>
+            </div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                <span class="sr-only">80% Complete (danger)</span>
+            </div>
+        </div>
+
+        <h4>动画效果</h4>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                <span class="sr-only">45% Complete</span>
+            </div>
+        </div>
+
+        <!--<h3>13.媒体画像</h3>-->
+    </div>
+</body>
+</html>

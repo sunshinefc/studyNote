@@ -1,0 +1,113 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+@import "../yo-ani/fade-in";
+@import "../yo-ani/fade-in-up";
+@import "../yo-ani/fade-in-right";
+@import "../yo-ani/fade-in-down";
+@import "../yo-ani/fade-in-left";
+@import "../yo-ani/fade-out";
+@import "../yo-ani/fade-out-up";
+@import "../yo-ani/fade-out-right";
+@import "../yo-ani/fade-out-down";
+@import "../yo-ani/fade-out-left";
+@import "../yo-ani/elastic-x";
+@import "../yo-ani/elastic-y";
+@import "../yo-ani/elastic-in";
+@import "../yo-ani/elastic-in-up";
+@import "../yo-ani/elastic-in-right";
+@import "../yo-ani/elastic-in-down";
+@import "../yo-ani/elastic-in-left";
+@import "../yo-ani/elastic-out";
+@import "../yo-ani/elastic-out-up";
+@import "../yo-ani/elastic-out-right";
+@import "../yo-ani/elastic-out-down";
+@import "../yo-ani/elastic-out-left";
+@import "../yo-ani/flip";
+@import "../yo-ani/flip-in-x";
+@import "../yo-ani/flip-in-y";
+@import "../yo-ani/flip-out-x";
+@import "../yo-ani/flip-out-y";
+@import "../yo-ani/roll-in-right";
+@import "../yo-ani/roll-in-left";
+@import "../yo-ani/roll-out-right";
+@import "../yo-ani/roll-out-left";
+@import "../yo-ani/speed-in-right";
+@import "../yo-ani/speed-in-left";
+@import "../yo-ani/speed-out-right";
+@import "../yo-ani/speed-out-left";
+@import "../yo-ani/rotate";
+@import "../yo-ani/rotate-in";
+@import "../yo-ani/rotate-in-up-right";
+@import "../yo-ani/rotate-in-up-left";
+@import "../yo-ani/rotate-in-down-right";
+@import "../yo-ani/rotate-in-down-left";
+@import "../yo-ani/rotate-out";
+@import "../yo-ani/rotate-out-up-right";
+@import "../yo-ani/rotate-out-up-left";
+@import "../yo-ani/rotate-out-down-right";
+@import "../yo-ani/rotate-out-down-left";
+@import "../yo-ani/zoom-in";
+@import "../yo-ani/zoom-in-up";
+@import "../yo-ani/zoom-in-right";
+@import "../yo-ani/zoom-in-down";
+@import "../yo-ani/zoom-in-left";
+@import "../yo-ani/zoom-out";
+@import "../yo-ani/zoom-out-up";
+@import "../yo-ani/zoom-out-right";
+@import "../yo-ani/zoom-out-down";
+@import "../yo-ani/zoom-out-left";
+@import "../yo-ani/flash";
+@import "../yo-ani/shake";
+@import "../yo-ani/pulse";
+@import "../yo-ani/extrusion";
+@import "../yo-ani/stretch";
+@import "../yo-ani/swing";
+@import "../yo-ani/sling";
+@import "../yo-ani/wobble";
+@import "../yo-ani/hinge";
+@mixin rute{
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  border:1px solid rgba(0, 0, 0, 0.42);
+  margin: 5px;
+  float: left;
+}
+.box{
+  width: 80%;
+  float: left;
+}
+.hezi{
+  @include rute;
+  color: rgba(0, 0, 0, 0.51);
+  text-align: center;
+  line-height: 50px;
+  font-size: 12px;
+  font-family: "微软雅黑";
+  box-sizing: border-box;
+  cursor: pointer;
+  &:hover{
+    color:#000;
+    box-shadow: 0 0 5px #999;
+  }
+}
+.animate{
+  width: 20%;
+  height: 100%;
+  border: 1px solid #000;
+  position: absolute;
+  right: 10px;
+  .cube{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:0 ;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: mediumpurple;
+  }
+}

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='jquery.js'></script>
+	<style>
+		*{
+			margin: 0;
+			padding:0;
+			list-style: none;
+		}
+		.tab{
+			width: 600px;
+			height: 550px;
+			border: 1px solid #000;
+			margin: 0 auto;
+		}
+		.titles{
+			width: 100%;
+			height: 50px;
+		}
+		.titles li{
+			width: 33%;
+			float: left;
+			border: 1px solid #000;
+			text-align: center;
+			line-height: 50px;
+		}
+		.titles li.active{
+			border-bottom: 3px solid purple;
+		}
+		.content{
+			width: 100%;
+			height: 500px;
+			position: relative;
+		}
+		.content li{
+			position: absolute;
+			width: 600px;
+			height: 500px;
+			font-size: 100px;
+			text-align: center;
+			line-height: 500px;
+			opacity: 0;
+			
+		}
+		.content li.active{
+			opacity: 1;
+		}
+		.color li{
+			width: 50px;
+			border:3px solid purple;
+			float: left;
+			margin-right: 4px;
+		}
+	</style>
+</head>
+<body>
+	<div class="tab">
+		<ul class="titles">
+			<li class="active">1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+		<ul class="content">
+			<li class="active">1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+
+		<!-- <ul class="color">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul> -->
+	</div>
+	<script>
+	$(function(){
+
+		// var colors=['red','blue','purple']
+		// $('.color li').each(function(i,v){
+		// 	$(v).attr('color',colors[i]);
+		// })
+
+		// $('.color li').attr('color',function(i,v){
+		// 	return colors[i];
+		// })
+
+		// setInterval(function(){
+		// 	$('.color li').height(function(){
+		// 	return Math.random()*100;
+		// 	})
+		// },50)
+		
+
+
+
+
+
+
+
+
+		//选项卡
+		var  titles=$('.titles li')
+		var contents=$('.content li')
+		titles.on('click',function(){
+			contents.removeClass('active').eq($(this).index()).addClass('active')
+			titles.removeClass('active').eq($(this).index()).addClass('active')
+			
+		})
+	})
+
+	</script>
+</body>
+</html>

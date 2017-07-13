@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='drag.js'></script>
+	<script>
+	window.onload=function(){
+		var box=document.getElementsByClassName('box')
+		// console.log(box)
+		new drag(box[0],{dir:'x',slide:true}).down()
+		new drag(box[1],{slide:false}).down()
+		new drag(box[2],{slide:''}).down()
+		new drag(box[3],{dir:'y'}).down()
+		new drag(box[4],{dir:'x'}).down()
+		new drag(box[5],{dir:'a'}).down()
+	}
+
+
+	</script>
+	<style>
+	body{
+		color: #fff;
+		font-size: 20px;
+		text-align: center;
+		line-height: 100px;
+	}
+		.box{
+			width: 100px;
+			height: 100px;
+			background:purple;
+			position: absolute;
+		}
+		.bigBox{
+			width: 800px;
+			height: 600px;
+			margin: 0 auto;
+			position: relative;
+			border:2px solid red;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="bigBox">
+		<div class="box">slice:true</div>
+		<div class="box">slice:false</div>
+		<div class="box">slice</div>
+		<div class="box">y</div>
+		<div class="box">x</div>
+		<div class="box">a</div>
+	</div>
+</body>
+</html>

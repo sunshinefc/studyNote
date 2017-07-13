@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid #000;
+            border-radius: 50%;
+
+        }
+    </style>
+</head>
+<body>
+    <canvas width="200" height="200" id="clock"></canvas>
+</body>
+    <script>
+        function format(second){
+            var m=parseInt(second/60);
+            var s=parseInt(second%60);
+            s=(s < 10)?( '0' + s):s;
+            m=(m<10)?('0'+m):m;
+            var time=m + ":" + s;
+            return time;
+        }
+        var c=document.getElementById('clock');
+        var ctx=c.getContext('2d');
+        var s=0
+        function js() {
+            s++;
+            ctx.clearRect(0,0,200,200)
+            ctx.save();
+            ctx.translate(100,100);
+            ctx.beginPath();
+            ctx.arc(0,0,3,0,Math.PI*2);
+            ctx.rotate(Math.PI*2/60*s);
+            ctx.moveTo(0,3)
+            ctx.lineTo(0,-60)
+            ctx.stroke();
+            ctx.closePath();
+            ctx.restore();
+        }
+        js()
+        setInterval(js,1000)
+
+    </script>
+</html>

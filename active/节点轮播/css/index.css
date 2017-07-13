@@ -1,0 +1,58 @@
+body{
+	margin:0;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+.whell-box{
+	width:100%;
+	height: 540px;
+	border:1px solid blue;
+	position: relative;
+}
+.whell-box .img-box{
+	width: 8000px;
+	height: 100%;
+	position: absolute;
+
+}
+.whell-box .img-box div{
+	height: 100%;
+	position: relative;
+	float: left;
+
+}
+.whell-box .img-box  img{
+	position: absolute;
+}
+
+.whell-box .button{
+	width: 100%;
+	height: 70px;
+	/*background: red;*/
+	position: absolute;
+	left: 0;
+	top: 50%;
+	font-size: 30px;
+	text-align: center;
+	margin-top: -35px;
+	line-height: 70px;
+
+}
+.whell-box .button a{
+	width: 30px;
+	height: 70px;
+	background: #ccc;
+	z-index: 100;
+}
+.whell-box .button a:hover{
+	background: #a50000;
+}
+.whell-box .button .leftbtn{
+	float: left;
+}
+.whell-box .button .rightbtn{
+	float: right;
+
+}

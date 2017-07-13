@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='dragyou.js'></script>
+	<script>
+	window.onload=function(){
+		var box=document.getElementsByClassName('box')
+		 drag(box[0],{dir:'a',slide:true})
+	}
+
+
+	</script>
+	<style>
+	body{
+		color: #fff;
+		font-size: 20px;
+		text-align: center;
+		line-height: 100px;
+	}
+		.box{
+			width: 100px;
+			height: 100px;
+			background:purple;
+			position: absolute;
+		}
+		.bigBox{
+			width: 800px;
+			height: 600px;
+			margin: 0 auto;
+			position: relative;
+			border:2px solid red;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="bigBox">
+		<!-- <div class="box">slice:true</div>
+		<div class="box">slice:false</div>
+		<div class="box">slice</div>
+		<div class="box">y</div>
+		<div class="box">x</div> -->
+		<div class="box"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	window.onload=function(){
+		var imgbox=document.getElementsByClassName('imgbox')
+		var ch=document.documentElement.clientHeight;
+		// console.log(ch)
+		var top=[];
+		
+		for(var i=0;i<imgbox.length;i++){
+			top.push(imgbox[i].offsetTop);
+
+		}
+		// console.log(top)
+		window.onscroll=function(){
+			var scroll=document.body.scrollTop||document.documentElement.scrollTop;
+			for(var i=0;i<top.length;i++){
+				if(scroll+ch>=top[i]){
+					var img=imgbox[i].getElementsByTagName('img')
+					for(var j=0;j<img.length;j++){
+						img[j].src=img[j].getAttribute('asrc')
+					}
+					
+				}
+			}
+		}
+	}
+
+	</script>
+	<style>
+		.imgbox{
+			width: 800px;
+			height: 800px;
+			border:1px solid blue;
+			margin: 0 auto;
+			margin-bottom: 50px;
+		}
+		.imgbox img{
+			float: left;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="imgbox">
+		<img src="" asrc="1.jpg" alt="">
+		<img src="" asrc="2.jpg" alt="">
+		<img src="" asrc="3.jpg" alt="">
+		<img src="" asrc="4.jpg" alt="">
+	</div>
+
+	<div class="imgbox">
+		<img src="" asrc="5.jpg" alt="">
+		<img src="" asrc="6.jpg" alt="">
+		<img src="" asrc="7.jpg" alt="">
+		<img src="" asrc="8.jpg" alt="">
+	</div>
+
+	<div class="imgbox">
+		<img src="" asrc="9.jpg" alt="">
+		<img src="" asrc="10.jpg" alt="">
+		<img src="" asrc="11.jpg" alt="">
+		<img src="" asrc="12.jpg" alt="">
+	</div>
+
+	<div class="imgbox">
+		<img src="" asrc="1.jpg" alt="">
+		<img src="" asrc="2.jpg" alt="">
+		<img src="" asrc="3.jpg" alt="">
+		<img src="" asrc="4.jpg" alt="">
+	</div>
+
+	
+</body>
+</html>

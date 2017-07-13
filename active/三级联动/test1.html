@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="">
+		<label>
+			全选:<input type="radio" name="chose" value="all">
+		</label>
+		<label>
+			全不选:<input type="radio" name="chose" value="none">
+		</label>
+		<label>
+			反选:<input type="radio" name="chose" value="dis">
+		</label>
+		
+		<div class="list">
+			<label for=""><input type="checkbox" name="like">篮球</label><br>
+			<label for=""><input type="checkbox" name="like">足球</label><br>
+			<label for=""><input type="checkbox" name="like">羽毛球</label><br>
+			<label for=""><input type="checkbox" name="like">棒球</label><br>
+			<label for=""><input type="checkbox" name="like">跑步</label><br>
+			<label for=""><input type="checkbox" name="like">听音乐</label><br>
+			<label for=""><input type="checkbox" name="like">看电视</label><br>
+		</div>
+	</form>
+	<script>
+	var form=document.forms[0];
+	var input=document.getElementsByTagName('input')
+	var list=document.getElementsByClassName('list')[0];
+	var inputs=list.getElementsByTagName('input')
+	//全选
+	input[0].onclick=function(){
+		for(var i=0;i<inputs.length;i++){
+			inputs[i].checked=true;
+		}
+	}
+
+	//全不选
+	input[1].onclick=function(){
+		for(var i=0;i<inputs.length;i++){
+			inputs[i].checked=false;
+		}
+	}
+
+	//反选
+	input[2].onclick=function(){
+		for(var i=0;i<inputs.length;i++){
+			inputs[i].checked=!inputs[i].checked;
+		}
+	}
+	
+
+
+	</script>
+</body>
+</html>

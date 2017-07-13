@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="a.html">
+		<input type="text">
+		<input type="submit" value="提交" name="sub">
+		<input type="reset" value="重置" name="res">
+	</form>
+	<script>
+	var form=document.forms[0];
+	var res=form.res;
+	res.onclick=function(e){
+		var f= confirm('确认重置?')
+		if(!f){
+				//阻值浏览器默认动作
+			// return false;
+			e.preventDefault();
+			return;
+		}
+	}
+
+	</script>
+</body>
+</html>

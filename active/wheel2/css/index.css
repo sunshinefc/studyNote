@@ -1,0 +1,73 @@
+body,ul,li{
+	margin: 0;
+	padding:0;
+	list-style: none
+}
+a{
+	text-decoration: none;
+}
+.contain{
+	width: 1190px;
+	height: 470px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	border:2px solid purple;
+}
+.contain .imgbox{
+	/*width: 8000px;*/
+	height: 100%;
+	position: relative;
+
+}
+.contain .imgbox img{
+	width: 1190px;
+	height: 100%;
+	float: left;
+}
+ .contain .list{
+	width: 200px;
+	height: 30px;
+	position: absolute;
+	z-index: 12px;
+	bottom: 30px;
+	left: 0;right: 0;
+	margin: 0 auto;
+
+} 
+ .contain .list li{
+	width: 30px;
+	height: 100%;
+	margin: 0 5px;
+	background: #444;
+	text-align: center;
+	line-height: 30px;
+	float: left;
+	
+} 
+
+.contain .button{
+	width: 100%;
+	height: 60px;
+	position: absolute;
+	top:0; bottom:0;
+	margin:auto;
+	z-index: 12px;
+	font-size: 30px;
+	color:black;
+	text-align: center;
+	line-height: 60px;
+}
+.contain .button .left{
+	width: 30px;
+	height: 100%;
+	float: left;
+	background: #888;
+}
+
+.contain .button .right{
+	width: 30px;
+	height: 100%;
+	float: right;
+	background: #888;
+}

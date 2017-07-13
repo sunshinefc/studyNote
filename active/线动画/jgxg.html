@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='function.js'></script>
+	<script src='animate.js'></script>
+	<script>
+	$(function(){
+		var box=$('.box')[0]
+		var first=$('.first',box)
+		// console.log(first)
+		for(var i=0;i<first.length;i++){
+			first[i].onmouseover=function(){
+				var bt=$('.bt',this)[0]
+				var bl=$('.bl',this)[0]
+				var br=$('.br',this)[0]
+				var bb=$('.bb',this)[0]
+				animate(bt,{width:270})
+				animate(bl,{height:180})
+				animate(br,{height:180})
+				animate(bb,{width:270})
+			}
+
+
+			first[i].onmouseout=function(){
+				var bt=$('.bt',this)[0]
+				var bl=$('.bl',this)[0]
+				var br=$('.br',this)[0]
+				var bb=$('.bb',this)[0]
+				animate(bt,{width:0})
+				animate(bl,{height:0})
+				animate(br,{height:0})
+				animate(bb,{width:0})
+			}
+		}
+
+
+
+
+	})
+
+	</script>
+	<style>
+
+		.box{
+			width: 560px;
+			height: 370px;
+			/*background: purple;*/
+			margin: 0 auto;
+		}
+		.box .first{
+			width: 270px;
+			height: 180px;
+			float: left;
+			margin: 0 0 5px 0;
+			position: relative;
+			margin-left: 10px;
+			
+		}
+		.box .first .imgbox{
+			width: 268px;
+			height: 178px;
+			overflow: hidden;
+			border: 1px solid #ccc;
+			
+		}
+
+		.first .bt,.first .bl,.first .br,.first .bb{
+			width: 0;
+			height: 0;
+			position: absolute;
+		}
+		.first .bt{
+			left:0;
+			top:0;
+		
+			border-top:1px solid #000;
+
+		}
+		.first .bl{
+			left: 0;
+			top: 0;
+			
+			border-left:1px solid #000;
+			
+		}
+		.first .br{
+			right: 0;
+			bottom: 0;
+			
+			border-right:1px solid #000;
+			
+		}
+		.first .bb{
+			right: 0;
+			bottom: 0;
+			
+			border-bottom:1px solid #000;
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="first">
+			<div class="imgbox">
+				<img src="1.jpg" alt="">
+			</div>
+			<div class="bt"></div>
+			<div class="bl"></div>
+			<div class="br"></div>
+			<div class="bb"></div>
+		</div>
+
+		<div class="first">
+			<div class="imgbox">
+				<img src="1.jpg" alt="">
+			</div>
+			<div class="bt"></div>
+			<div class="bl"></div>
+			<div class="br"></div>
+			<div class="bb"></div>
+		</div>
+
+		<div class="first">
+			<div class="imgbox">
+				<img src="1.jpg" alt="">
+			</div>
+			<div class="bt"></div>
+			<div class="bl"></div>
+			<div class="br"></div>
+			<div class="bb"></div>
+		</div>
+
+		<div class="first">
+			<div class="imgbox">
+				<img src="1.jpg" alt="">
+			</div>
+			<div class="bt"></div>
+			<div class="bl"></div>
+			<div class="br"></div>
+			<div class="bb"></div>
+		</div>
+	</div>
+</body>
+</html>

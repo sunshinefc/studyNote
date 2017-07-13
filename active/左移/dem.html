@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='function.js'></script>
+	<script src='animate.js'></script>
+	<script>
+		$(function(){
+			var box=$('.box')[0];
+			var as=$('a',box);
+			for(var i=0;i<as.length;i++){
+				// this
+				as[i].onmouseover=function(){
+					var img=$('img',this)[0]
+					 // console.log(img)
+					animate(img,{marginLeft:-20},500)
+				}
+
+				as[i].onmouseout=function(){
+					var img=$('img',this)[0]
+					animate(img,{marginLeft:0},500)
+				}
+			}
+			
+		})
+
+	</script>
+</head>
+<body>
+	<div class="box">
+		<a href=""><img src="1.jpg" alt=""></a>
+		<a href=""><img src="1.jpg" alt=""></a>
+		<a href=""><img src="1.jpg" alt=""></a>
+		<a href=""><img src="1.jpg" alt=""></a>
+
+		<a href=""><img src="1.jpg" alt=""></a>
+		<a href=""><img src="1.jpg" alt=""></a>
+		<a href=""><img src="1.jpg" alt=""></a>
+		<a href=""><img src="1.jpg" alt=""></a>
+	</div>
+	<style>
+		.box{
+			width: 900px;
+			height: 600px;
+			margin: 0 auto;
+			border:1px solid purple;
+		}
+		.box a{
+			width: 200px;
+			height: 200px;
+			display: block;
+			float: left;
+			position: relative;
+			border-bottom: 1px solid red;
+			border-right: 1px solid red;
+		}
+		.box a img{
+			width: 150px;
+			height: 150px;
+			/*position: absolute;*/
+			/*bottom: 20px;
+			left: 60px;*/
+		}
+
+	</style>
+</body>
+</html>

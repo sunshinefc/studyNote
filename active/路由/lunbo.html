@@ -1,0 +1,25 @@
+<div class="lunbo-box">
+    <style>
+        .lunbo-box{
+            width:300px;
+            height:400px;
+            border:1px solid #000;
+
+        }
+        .lunbo-inner{
+            width:900px;
+            transition:all 0.8s ease;
+        }
+        .lunbo-inner div img{
+            width:300px;
+            height:auto;
+            float:left;
+
+        }
+    </style>
+    <div class="lunbo-inner">
+        <div ng-repeat="v in set track by $index">
+            <img ng-src="{{v}}" alt="">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="date">
+		
+	</div>
+	<script>
+	
+	var date=document.getElementsByClassName('date')[0]
+	d()
+	setInterval(d,1000)
+	function d(){
+		var time= new Date();
+		var y=time.getFullYear();
+		var M=time.getMonth()+1;
+		var d=time.getDate();
+
+		var h=time.getHours();
+		var f=time.getMinutes();
+		f=f<10?'0'+f:f;
+		var s=time.getSeconds();
+		s=s<10?'0'+s:s;
+
+		date.innerHTML=y+'-'+M+'-'+d+' '+h+':'+f+':'+s;
+		
+	}
+	
+	
+	
+
+
+
+	</script>
+</body>
+</html>

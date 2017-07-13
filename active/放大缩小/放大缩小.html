@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='function.js'></script>
+	<script>
+	$(function(){
+		var box=document.getElementsByClassName('box')[0]
+		console.log(box)
+			var w=box.offsetWidth;
+			var h=box.offsetHeight;
+			var minw=w;
+			var minh=h;
+			var maxw=300;
+			var maxh=300;
+			var speed=10;
+		mouseWheel(box,function(){		
+			 w+=speed;
+			 h+=speed;
+			 if(w>maxw){w=maxw}
+			 if(h>maxh){h=maxh}
+			this.style.width=w+'px';
+			this.style.height=h+'px';
+
+		},function(){
+			 w-=speed;
+			 h-=speed;
+			 if(w<minw){w=minw}
+			 if(h<minh){h=minh}
+			this.style.width=w+'px';
+			this.style.height=h+'px';
+		})
+	})
+
+	</script>
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			overflow: hidden;
+			background: purple;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="box"><img src="33.jpg" alt=""></div>
+</body>
+</html>

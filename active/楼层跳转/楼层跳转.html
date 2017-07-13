@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='animate.js'></script>
+	<script>
+		window.onload=function(){
+			var floors=document.getElementsByClassName('floor')
+			var daohang=document.getElementsByClassName('daohang')[0]
+			var spans=daohang.getElementsByTagName('span')
+			var tops=[];
+			for(var i=0;i<floors.length;i++){
+				tops.push(floors[i].offsetTop)
+			}
+			console.log(tops)
+			window.onscroll=function(){
+				var scroll=document.body.scrollTop||document.documentElement.scrollTop;
+				for(var i=0;i<tops.length;i++){
+					if(scroll+100>tops[i]){
+						for(var j=0;j<spans.length;j++){
+							spans[j].style.backgroundColor=''
+						}
+						spans[i].style.backgroundColor='blue'
+					}
+				}
+	
+			}
+
+			for(var i=0;i<spans.length;i++){
+				spans[i].index=i;
+				spans[i].onclick=function(){
+						animate(document.body,{scrollTop:tops[this.index]},300)
+						animate(document.documentElement,{scrollTop:tops[this.index]},300)
+					
+				}
+			}
+			
+		}
+
+	</script>
+	<style>
+		.floor{
+			width: 800px;
+			height: 600px;
+			margin: 0 auto;
+			font-size: 100px;
+			line-height: 600px;
+			text-align: center;
+			border:2px solid purple;
+		}
+		
+		.daohang{
+			width: 50px;
+			height: 600px;
+			position: fixed;
+			bottom: 20px;
+			left: 50%;
+			margin-left: -480px;
+
+		}
+		.daohang span{
+			display: block;
+			width: 50px;
+			height: 50px;
+			margin-bottom: 2px;
+			background: #555;
+			text-align: center;
+			line-height: 50px;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="floor">001</div>
+	<div class="floor">002</div>
+	<div class="floor">003</div>
+	<div class="floor">004</div>
+	<div class="floor">005</div>
+	<div class="floor">006</div>
+	<div class="floor">007</div>
+	<div class="floor">008</div>
+	<div class="floor">009</div>
+	<div class="floor">010</div>
+
+	
+		<div class="daohang">
+			<span class="">1</span>
+			<span class="">2</span>
+			<span class="">3</span>
+			<span class="">4</span>
+			<span class="">5</span>
+			<span class="">6</span>
+			<span class="">7</span>
+			<span class="">8</span>
+			<span class="">9</span>
+			<span class="">10</span>
+		</div>
+		
+</body>
+</html>
